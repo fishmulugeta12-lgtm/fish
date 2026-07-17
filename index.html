@@ -1,101 +1,986 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fountain Hotel & SPA | Luxury Stay</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root { --gold: #c5a059; --bg: #0a0a0a; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: #e5e7eb; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .bg-gold { background-color: var(--gold); }
-        .text-gold { color: var(--gold); }
-        .border-gold { border-color: var(--gold); }
-        .hover-gold:hover { background-color: var(--gold); color: white; border-color: var(--gold); }
-        
-        /* High-impact 3D Text Shadow */
-        .text-3d-shadow {
-            text-shadow: 0 1px 0 #444, 0 2px 0 #333, 0 3px 0 #222, 0 4px 0 #111, 0 5px 0 #000, 0 6px 1px rgba(0,0,0,0.4), 0 0 5px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.5), 0 3px 5px rgba(0,0,0,0.4), 0 7px 10px rgba(0,0,0,0.3);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strata Concrete &amp; Epoxy Systems — Floors Engineered to Never Peel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://tally.so/widgets/embed.js"></script>
+<style>
+:root{
+--bg: #EDEAE3;
+--bg-alt: #E2DDD0;
+--ink: #221F1C;
+--ink-soft: #5B564D;
+--ink-faint: #8B8577;
+--amber: #A9793D;
+--amber-deep: #7E5A2C;
+--teal: #354F4B;
+--teal-deep: #263835;
+--line: #C9C1AE;
+--rust: #9A4530;
+--dark-bg: #221F1C;
+--dark-ink: #EDEAE3;
+--dark-line: #423D35;
+--radius: 2px;
+--font-display: 'Barlow Semi Condensed', sans-serif;
+--font-body: 'Inter', sans-serif;
+--font-mono: 'IBM Plex Mono', monospace;
+--max: 1180px;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{
+background:var(--bg);
+color:var(--ink);
+font-family:var(--font-body);
+line-height:1.6;
+font-size:16px;
+-webkit-font-smoothing:antialiased;
+}
+img,svg{display:block; max-width:100%;}
+a{color:inherit; text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit; cursor:pointer; border:none; background:none;}
+input,select{font-family:inherit; font-size:1rem;}
+@media (prefers-reduced-motion: reduce){
+*{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+}
+:focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+h1,h2,h3,h4{font-family:var(--font-display); font-weight:700; letter-spacing:0.01em; line-height:1.06; text-transform:uppercase;}
+.eyebrow{
+font-family:var(--font-mono);
+font-size:0.72rem;
+letter-spacing:0.14em;
+text-transform:uppercase;
+color:var(--amber-deep);
+display:flex; align-items:center; gap:10px;
+margin-bottom:14px;
+}
+.eyebrow::before{content:""; width:22px; height:1px; background:var(--amber-deep);}
+.joint{
+position:relative;
+height:26px;
+width:100%;
+}
+.joint::before{
+content:"";
+position:absolute; left:0; right:0; top:50%;
+height:1px;
+background:repeating-linear-gradient(90deg, var(--line) 0 10px, transparent 10px 16px);
+}
+.joint::after{
+content:"";
+position:absolute; left:0; right:0; top:calc(50% - 3px);
+height:6px;
+background:
+linear-gradient(90deg, var(--bg) 0 0) 0 0/6px 100% no-repeat,
+linear-gradient(90deg, var(--bg) 0 0) 100% 0/6px 100% no-repeat;
+}
+.joint.dark::before{background:repeating-linear-gradient(90deg, var(--dark-line) 0 10px, transparent 10px 16px);}
+.joint.dark::after{
+background:
+linear-gradient(90deg, var(--dark-bg) 0 0) 0 0/6px 100% no-repeat,
+linear-gradient(90deg, var(--dark-bg) 0 0) 100% 0/6px 100% no-repeat;
+}
+.util-bar{
+background:var(--dark-bg);
+color:var(--ink-faint);
+font-family:var(--font-mono);
+font-size:0.72rem;
+letter-spacing:0.04em;
+}
+.util-bar .wrap{
+display:flex; justify-content:space-between; align-items:center;
+padding-top:9px; padding-bottom:9px;
+flex-wrap:wrap; gap:6px 20px;
+}
+.util-bar span{color:#C7BFA9;}
+header.site{
+background:var(--bg);
+border-bottom:1px solid var(--line);
+position:sticky; top:0; z-index:50;
+}
+nav.wrap{
+display:flex; align-items:center; justify-content:space-between;
+padding-top:18px; padding-bottom:18px;
+}
+.logo{
+font-family:var(--font-display); font-weight:800; font-size:1.5rem;
+letter-spacing:0.03em; display:flex; align-items:baseline; gap:8px;
+}
+.logo .mark{color:var(--amber);}
+nav .links{display:flex; gap:34px; align-items:center;}
+nav .links a{font-size:0.92rem; font-weight:500; color:var(--ink-soft);}
+nav .links a:hover{color:var(--ink);}
+.btn{
+display:inline-flex; align-items:center; gap:8px;
+font-family:var(--font-display); font-weight:700; text-transform:uppercase; letter-spacing:0.04em;
+font-size:0.9rem;
+padding:13px 24px;
+border-radius:var(--radius);
+transition:transform 0.15s ease, background 0.15s ease;
+}
+.btn-primary{background:var(--amber); color:#fff;}
+.btn-primary:hover{background:var(--amber-deep); transform:translateY(-1px);}
+.btn-ghost{background:transparent; color:var(--ink); border:1px solid var(--ink);}
+.btn-ghost:hover{background:var(--ink); color:var(--bg);}
+.btn-dark{background:var(--dark-bg); color:var(--dark-ink);}
+.btn-dark:hover{background:var(--teal-deep);}
+nav .nav-cta{display:none;}
+@media(min-width:920px){ nav .nav-cta{display:inline-flex;} }
+.mobile-toggle{display:block; font-family:var(--font-mono); font-size:0.85rem; border:1px solid var(--ink); padding:9px 14px;}
+@media(min-width:920px){ .mobile-toggle{display:none;} nav .links{display:flex;} }
+@media(max-width:919px){ nav .links{display:none;} }
+.hero{
+padding:76px 0 60px;
+position:relative;
+overflow:hidden;
+}
+.hero .wrap{
+display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+}
+@media(max-width:900px){ .hero .wrap{grid-template-columns:1fr;} }
+.hero h1{
+font-size:clamp(2.4rem, 4.6vw + 1rem, 4.1rem);
+max-width:11.5ch;
+margin-bottom:22px;
+}
+.hero h1 em{font-style:normal; color:var(--amber);}
+.hero p.sub{
+font-size:1.12rem; color:var(--ink-soft); max-width:46ch; margin-bottom:32px;
+}
+.hero-ctas{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:38px;}
+.trust-strip{
+display:flex; flex-wrap:wrap; gap:22px;
+font-family:var(--font-mono); font-size:0.76rem; color:var(--ink-soft);
+border-top:1px solid var(--line); padding-top:20px;
+}
+.trust-strip strong{color:var(--ink); font-weight:600;}
+.strata-art{position:relative;}
+.strata-art svg{width:100%; height:auto;}
+.strata-art .band{
+opacity:0; transform:translateY(10px);
+animation:riseIn 0.7s ease forwards;
+}
+.strata-art .band:nth-child(1){animation-delay:0.05s;}
+.strata-art .band:nth-child(2){animation-delay:0.18s;}
+.strata-art .band:nth-child(3){animation-delay:0.31s;}
+.strata-art .band:nth-child(4){animation-delay:0.44s;}
+.strata-art .band:nth-child(5){animation-delay:0.57s;}
+.strata-art .label{opacity:0; animation:fadeIn 0.6s ease forwards; animation-delay:0.9s;}
+@keyframes riseIn{to{opacity:1; transform:translateY(0);}}
+@keyframes fadeIn{to{opacity:1;}}
+section{padding:84px 0;}
+.section-head{max-width:640px; margin-bottom:52px;}
+.section-head h2{font-size:clamp(1.9rem, 2.6vw + 1rem, 2.7rem); margin-bottom:16px;}
+.section-head p{color:var(--ink-soft); font-size:1.05rem;}
+.dark{background:var(--dark-bg); color:var(--dark-ink);}
+.dark .section-head p{color:#C7BFA9;}
+.dark .eyebrow{color:#D6A868;}
+.dark .eyebrow::before{background:#D6A868;}
+.alt{background:var(--bg-alt);}
+.ps-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
+@media(max-width:820px){ .ps-grid{grid-template-columns:1fr;} }
+.ps-card{padding:30px 0;}
+.ps-card h3{font-size:1.3rem; margin-bottom:14px; text-transform:none; letter-spacing:0;}
+.ps-card p{color:var(--ink-soft);}
+.fail-list{margin-top:18px;}
+.fail-list li{
+font-family:var(--font-mono); font-size:0.85rem; color:var(--rust);
+padding:8px 0; border-top:1px solid var(--line);
+}
+.fail-list li:last-child{border-bottom:1px solid var(--line);}
+.offer-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--dark-line); border:1px solid var(--dark-line);}
+@media(max-width:820px){ .offer-grid{grid-template-columns:1fr;} }
+.offer-card{background:var(--dark-bg); padding:38px 32px;}
+.offer-card .num{font-family:var(--font-mono); font-size:0.75rem; color:#D6A868; letter-spacing:0.1em;}
+.offer-card h3{font-size:1.4rem; margin:16px 0 14px; text-transform:none; letter-spacing:0;}
+.offer-card p{color:#C7BFA9; font-size:0.95rem;}
+.offer-card .icon{width:38px; height:38px; margin-bottom:6px;}
+.offer-total{
+margin-top:1px; background:var(--teal); color:#fff; padding:30px 32px;
+display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+}
+.offer-total p{font-family:var(--font-mono); font-size:0.88rem; max-width:56ch;}
+.process-list{border-top:1px solid var(--line);}
+.process-row{
+display:grid; grid-template-columns:90px 1fr 1fr; gap:24px;
+padding:26px 0; border-bottom:1px solid var(--line);
+align-items:start;
+}
+@media(max-width:760px){ .process-row{grid-template-columns:50px 1fr; } .process-row .p-time{grid-column:2; margin-top:6px;} }
+.process-row .p-num{font-family:var(--font-mono); font-size:0.85rem; color:var(--amber-deep);}
+.process-row h4{font-size:1.15rem; text-transform:none; letter-spacing:0; margin-bottom:8px;}
+.process-row p{color:var(--ink-soft); font-size:0.95rem;}
+.p-time{font-family:var(--font-mono); font-size:0.78rem; color:var(--ink-faint); text-align:right;}
+@media(max-width:760px){ .p-time{text-align:left;} }
+.stats-row{display:flex; flex-wrap:wrap; gap:44px; margin-bottom:56px; padding-bottom:44px; border-bottom:1px solid var(--dark-line);}
+.stat b{display:block; font-family:var(--font-display); font-size:2.4rem; color:#D6A868;}
+.stat span{font-family:var(--font-mono); font-size:0.76rem; color:#C7BFA9;}
+.swatch-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:56px;}
+@media(max-width:820px){ .swatch-grid{grid-template-columns:repeat(2,1fr);} }
+.swatch{
+aspect-ratio:4/3; border-radius:var(--radius); position:relative; overflow:hidden;
+display:flex; align-items:flex-end; padding:14px;
+}
+.swatch span{font-family:var(--font-mono); font-size:0.7rem; color:rgba(255,255,255,0.85); position:relative; z-index:2;}
+.swatch::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.55) 100%);}
+.sw1{background:linear-gradient(135deg,#8C7A63,#5E5245);}
+.sw2{background:linear-gradient(135deg,#6E7F7A,#3E4C48);}
+.sw3{background:linear-gradient(135deg,#B08A4E,#7A5E33);}
+.sw4{background:linear-gradient(135deg,#4C5A57,#2B3532);}
+.testimonials{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--dark-line);}
+@media(max-width:900px){ .testimonials{grid-template-columns:1fr;} }
+.testi{background:var(--dark-bg); padding:28px 26px;}
+.testi p{font-size:0.98rem; color:#EDEAE3; margin-bottom:16px;}
+.testi cite{font-style:normal; font-family:var(--font-mono); font-size:0.76rem; color:#C7BFA9;}
+table.pricing{width:100%; border-collapse:collapse; margin-bottom:20px;}
+table.pricing th{
+text-align:left; font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase;
+color:var(--ink-faint); padding:12px 16px; border-bottom:1px solid var(--ink);
+}
+table.pricing td{padding:18px 16px; border-bottom:1px solid var(--line); font-size:0.95rem;}
+table.pricing td.price{font-family:var(--font-mono); color:var(--amber-deep); font-weight:600; white-space:nowrap;}
+table.pricing tr:hover td{background:rgba(169,121,61,0.06);}
+.pricing-note{
+font-size:0.9rem; color:var(--ink-soft); border-left:2px solid var(--amber); padding-left:16px; max-width:64ch;
+}
+.checker{
+background:var(--bg-alt); border:1px solid var(--line); border-radius:var(--radius);
+padding:40px; display:grid; grid-template-columns:1fr 1fr; gap:44px;
+}
+@media(max-width:820px){ .checker{grid-template-columns:1fr; padding:26px;} }
+.checker-intro h3{font-size:1.5rem; text-transform:none; letter-spacing:0; margin-bottom:14px;}
+.checker-intro p{color:var(--ink-soft); margin-bottom:20px; font-size:0.96rem;}
+.checker-intro ul li{
+font-size:0.9rem; color:var(--ink-soft); padding:7px 0 7px 20px; position:relative;
+}
+.checker-intro ul li::before{content:"—"; position:absolute; left:0; color:var(--amber);}
+.q-block{margin-bottom:20px;}
+.q-block label{display:block; font-family:var(--font-mono); font-size:0.76rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-soft); margin-bottom:10px;}
+.q-options{display:flex; flex-wrap:wrap; gap:8px;}
+.q-opt{
+border:1px solid var(--line); background:#fff; padding:9px 14px; font-size:0.85rem; border-radius:var(--radius);
+transition:all 0.15s ease;
+}
+.q-opt:hover{border-color:var(--amber);}
+.q-opt.active{background:var(--ink); color:var(--bg); border-color:var(--ink);}
+.checker-result{
+margin-top:22px; padding:20px; border-radius:var(--radius); display:none;
+}
+.checker-result.show{display:block;}
+.checker-result .risk-tag{font-family:var(--font-mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; padding:5px 10px; border-radius:var(--radius); display:inline-block; margin-bottom:12px;}
+.risk-low{background:#DCE6DE; color:#33513A;}
+.risk-med{background:#F0DFC0; color:#7A5A1E;}
+.risk-high{background:#F0D2C7; color:#8A3A22;}
+.lead-form{margin-top:18px; display:none;}
+.lead-form.show{display:flex; gap:10px; flex-wrap:wrap;}
+.lead-form input{
+flex:1; min-width:180px; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); background:#fff;
+}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-q{
+width:100%; display:flex; justify-content:space-between; align-items:center;
+padding:22px 0; text-align:left; font-family:var(--font-display); font-weight:600; font-size:1.08rem; text-transform:none;
+}
+.faq-q .plus{font-family:var(--font-mono); font-size:1.1rem; color:var(--amber-deep); transition:transform 0.2s ease;}
+.faq-item.open .plus{transform:rotate(45deg);}
+.faq-a{max-height:0; overflow:hidden; transition:max-height 0.25s ease;}
+.faq-a p{padding-bottom:22px; color:var(--ink-soft); max-width:70ch;}
+.faq-item.open .faq-a{max-height:220px;}
+.cta-grid{display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:start;}
+@media(max-width:900px){ .cta-grid{grid-template-columns:1fr;} }
+.cta-grid h2{font-size:clamp(1.9rem,3vw+1rem,2.6rem); margin-bottom:18px;}
+.cta-grid p{color:#C7BFA9; max-width:46ch; margin-bottom:26px;}
+.booking-card{background:var(--dark-ink); color:var(--ink); border-radius:var(--radius); padding:32px;}
+.booking-card h4{text-transform:none; font-size:1.15rem; margin-bottom:20px;}
+.field{margin-bottom:14px;}
+.field label{display:block; font-family:var(--font-mono); font-size:0.72rem; text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;}
+.field input, .field select{width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius);}
+.field-row{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+.booking-card .btn{width:100%; justify-content:center; margin-top:8px;}
+.confirm-msg{display:none; text-align:center; padding:30px 10px;}
+.confirm-msg.show{display:block;}
+.confirm-msg .check{width:44px; height:44px; margin:0 auto 16px;}
+footer{background:var(--dark-bg); color:#C7BFA9; padding:56px 0 28px;}
+.footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:36px; margin-bottom:44px;}
+@media(max-width:820px){ .footer-grid{grid-template-columns:1fr 1fr;} }
+.footer-grid h5{font-family:var(--font-mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:#8B8577; margin-bottom:16px;}
+.footer-grid li{padding:5px 0; font-size:0.9rem;}
+.footer-grid li a:hover{color:#fff;}
+.badge-row{display:flex; flex-wrap:wrap; gap:10px;}
+.badge{
+font-family:var(--font-mono); font-size:0.68rem; border:1px solid var(--dark-line); padding:6px 10px; border-radius:var(--radius); color:#C7BFA9;
+}
+.footer-bottom{
+border-top:1px solid var(--dark-line); padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+font-family:var(--font-mono); font-size:0.72rem; color:#8B8577;
+}
+.mobile-cta{
+position:fixed; bottom:0; left:0; right:0; z-index:60;
+background:var(--dark-bg); padding:12px 16px; display:flex; gap:10px; box-shadow:0 -4px 14px rgba(0,0,0,0.2);
+}
+.mobile-cta .btn{flex:1; justify-content:center;}
+@media(min-width:760px){ .mobile-cta{display:none;} }
+@media(max-width:759px){ body{padding-bottom:70px;} }
+.mock-flag{
+background:#9A4530; color:#fff; font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.04em;
+text-align:center; padding:8px 16px;
+}
+.b-a-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 56px;
+}
+@media(max-width: 760px) { .b-a-grid { grid-template-columns: 1fr; } }
+.b-a-card {
+    background: var(--dark-line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+}
+.b-a-img {
+    height: 280px;
+    display: block;
+    position: relative;
+}
+.b-a-img svg{width:100%; height:100%; display:block;}
+.b-a-label {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--amber);
+    color: #fff;
+    padding: 4px 10px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius);
+    z-index: 2;
+}
+.b-a-caption {
+    padding: 20px;
+    font-size: 0.95rem;
+    color: #EDEAE3;
+}
+.process-img-placeholder {
+    width: 100%;
+    height: 220px;
+    background: rgba(0,0,0,0.03);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin-top: 18px;
+    text-align: center;
+    border: 1px dashed var(--ink-faint);
+}
+</style>
 </head>
-<body class="bg-[#0a0a0a] text-gray-200">
+<body>
 
-    <nav class="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center bg-black/80 backdrop-blur-md border-b border-white/10">
-        <div class="text-xl font-bold tracking-[0.2em] text-white uppercase italic">FOUNTAIN <span class="text-gold">HOTEL & SPA</span></div>
-        <a href="https://maps.google.com/maps?hl=en-GB&gl=ET&um=1&ie=UTF-8&fb=1&sa=X&geocode=KTks6tr-hUsWMXCrS8kA_-h0&daddr=2R37+8PJ%20Fountain%20Hotel%20%26%20SPA%2C%20Mebrat%20hail%2C%20Addis%20Ababa&ved=1t:55111&ictx=111" target="_blank" class="border border-gold text-gold px-6 py-2 hover-gold transition duration-300 tracking-wider text-xs uppercase font-semibold">Book Now</a>
-    </nav>
+<div class="mock-flag" data-demo-flag>SAMPLE PAGE — placeholder license #, reviews &amp; stats below. Real client numbers go in before this ever gets sent to a lead.</div>
 
-    <header class="relative h-screen flex items-center justify-center text-center bg-transparent">
-        <div class="max-w-4xl px-4">
-            <h1 class="text-6xl md:text-8xl text-white mb-6 leading-tight font-light italic text-3d-shadow">Modern Comfort, Habesha Hospitality.</h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-10 font-light tracking-[0.2em] uppercase italic opacity-80">Your Home in Addis.</p>
+<div class="util-bar">
+<div class="wrap">
+<span>License #[CLIENT LICENSE #] — Verify with State Contractors Board</span>
+<span>Free slab diagnostic on every quote &nbsp;·&nbsp; (555) 014-8890</span>
+</div>
+</div>
+
+<header class="site">
+<nav class="wrap">
+<div class="logo"><span class="mark">/</span>STRATA</div>
+<ul class="links">
+<li><a href="#offer">The Offer</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#proof">Proof</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#checker">Risk Checker</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<a href="#" data-tally-open="2EyrMA" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" class="btn btn-primary nav-cta">Book Free Diagnostic</a>
+<button class="mobile-toggle">Menu</button>
+</nav>
+</header>
+
+<section class="hero">
+<div class="wrap">
+<div>
+<p class="eyebrow">Residential &amp; Commercial Concrete Coatings</p>
+<h1>The last floor coating you'll ever need to <em>replace</em>.</h1>
+<p class="sub">Most epoxy failures trace back to one skipped step: nobody tested the slab. We diagnose before we quote, install to a written spec, and back it with a warranty that names exactly what's covered.</p>
+<div class="hero-ctas">
+<a href="#" data-tally-open="2EyrMA" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" class="btn btn-primary">Book Your Free Slab Diagnostic</a>
+<a href="#offer" class="btn btn-ghost">See What's Guaranteed</a>
+</div>
+<div class="trust-strip">
+<div>Licensed &amp; Insured — <strong>#[CLIENT LICENSE #]</strong></div>
+<div><strong>[X,XXX+]</strong> sq ft installed, 2025</div>
+<div><strong>15-Year</strong> No-Peel Warranty</div>
+<div><strong>[X.X/5]</strong> across [XXX] verified reviews</div>
+</div>
+</div>
+<div class="strata-art" aria-hidden="true">
+<svg viewBox="0 0 460 400" xmlns="http://www.w3.org/2000/svg">
+<g class="band" fill="#8B8577"><rect x="30" y="330" width="400" height="42" rx="2"/></g>
+<g class="band" fill="#5B564D"><rect x="30" y="300" width="400" height="26" rx="2"/></g>
+<g class="band" fill="#354F4B"><rect x="30" y="270" width="400" height="26" rx="2"/></g>
+<g class="band" fill="#7E5A2C"><rect x="30" y="230" width="400" height="36" rx="2"/></g>
+<g class="band" fill="#D6A868"><rect x="30" y="205" width="400" height="21" rx="2"/></g>
+<g class="label" font-family="IBM Plex Mono" font-size="11" fill="#221F1C">
+<text x="440" y="352">SLAB</text>
+<text x="440" y="316">MOISTURE BARRIER</text>
+<text x="440" y="286">PRIMER</text>
+<text x="440" y="252">BASE COAT</text>
+<text x="440" y="219">TOPCOAT + SEALER</text>
+</g>
+<g class="label">
+<line x1="430" y1="348" x2="436" y2="348" stroke="#8B8577"/>
+<line x1="430" y1="311" x2="436" y2="311" stroke="#5B564D"/>
+<line x1="430" y1="281" x2="436" y2="281" stroke="#354F4B"/>
+<line x1="430" y1="248" x2="436" y2="248" stroke="#7E5A2C"/>
+<line x1="430" y1="214" x2="436" y2="214" stroke="#D6A868"/>
+</g>
+</svg>
+</div>
+</div>
+</section>
+
+<div class="joint"></div>
+
+<section class="alt">
+<div class="wrap">
+<div class="section-head">
+<p class="eyebrow">The Problem</p>
+<h2>Most epoxy failures aren't epoxy's fault.</h2>
+</div>
+<div class="ps-grid">
+<div class="ps-card">
+<h3>What actually causes peeling, bubbling, and yellowing</h3>
+<p>Cured epoxy is a stable, decades-durable material. The floors that fail almost always fail at the slab — moisture vapor pushing up from underneath, surface prep that was skipped to save a day, or a coating system mismatched to the traffic it's under.</p>
+<ul class="fail-list">
+<li>Delamination — coating applied over untested moisture</li>
+<li>Hot-tire pickup — wrong topcoat for a heated garage floor</li>
+<li>UV yellowing — interior-grade resin used outdoors</li>
+<li>Blistering — no vapor barrier on a below-grade slab</li>
+</ul>
+</div>
+<div class="ps-card">
+<h3>Why we start with a diagnostic, not a quote</h3>
+<p>Before we tell you a number, we run an ASTM F2170 moisture test and a slab profile — checking cracking, prior coatings, and porosity. That reading determines the coating system, not the other way around.</p>
+<p style="margin-top:14px;">It's the same reason a structural engineer doesn't spec a beam before seeing the load. A floor quoted without this step is a guess wearing a price tag.</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="joint"></div>
+
+<section id="offer" class="dark">
+<div class="wrap">
+<div class="section-head">
+<p class="eyebrow">The Strata Standard</p>
+<h2>Every project includes three things most quotes leave out.</h2>
+<p>Not upgrades. Not add-ons. Standard on every residential and commercial job we price.</p>
+</div>
+</div>
+<div class="wrap" style="padding:0;">
+<div class="offer-grid">
+<div class="offer-card">
+<div class="num">01 / DIAGNOSTIC</div>
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#D6A868" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.5-4.5"/></svg>
+<h3>Free Moisture &amp; Slab Diagnostic</h3>
+<p>ASTM F2170 vapor test and full slab profile before you receive a number. A $350 value, included on every quote — quoted work only, never charged if you don't proceed.</p>
+</div>
+<div class="offer-card">
+<div class="num">02 / WARRANTY</div>
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#D6A868" stroke-width="1.4"><path d="M12 3l7 3v6c0 5-3.2 8-7 9-3.8-1-7-4-7-9V6l7-3z"/></svg>
+<h3>15-Year No-Peel Warranty</h3>
+<p>Written and transferable. Covers delamination, hot-tire pickup, and blistering by name. If it fails from our workmanship, we re-coat it at no cost — documented in your contract, not a verbal promise.</p>
+</div>
+<div class="offer-card">
+<div class="num">03 / MAINTENANCE</div>
+<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#D6A868" stroke-width="1.4"><path d="M4 12h16M12 4v16"/></svg>
+<h3>Year-One Care Plan</h3>
+<p>A maintenance kit and a scheduled inspection visit at the 12-month mark, included. We check back before you'd ever need to call us.</p>
+</div>
+</div>
+<div class="offer-total">
+<p>Diagnostic + Warranty + Year-One Inspection — bundled into every quoted price. If your floor fails from our work, we fix it in writing, not on a handshake.</p>
+<a href="#" data-tally-open="2EyrMA" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" class="btn btn-dark" style="background:#fff; color:#221F1C;">Get My Quote</a>
+</div>
+</div>
+</section>
+
+<div class="joint dark" style="background:var(--dark-bg);"></div>
+
+<section id="process">
+<div class="wrap">
+<div class="section-head">
+<p class="eyebrow">How It Works</p>
+<h2>From first call to cured floor.</h2>
+<p>Five steps, each with a defined outcome — so you always know what's happening to your space and when you'll get it back.</p>
+</div>
+<div class="process-list">
+<div class="process-row">
+<div class="p-num">01</div>
+<div><h4>Diagnostic Visit</h4><p>We test moisture, inspect the slab, and walk the space with you. No sales pitch — a technical read of what your floor needs.</p></div>
+<div class="p-time">30–45 MIN ON SITE</div>
+</div>
+<div class="process-row">
+<div class="p-num">02</div>
+<div><h4>Custom Spec &amp; Quote</h4><p>A written scope naming the exact coating system, prep method, and price range — sent within 48 hours of the visit.</p></div>
+<div class="p-time">WITHIN 48 HRS</div>
+</div>
+<div class="process-row">
+<div class="p-num">03</div>
+<div>
+    <h4>Surface Prep &amp; Grind</h4>
+    <p>Diamond-grinding to the specified concrete surface profile (CSP). This step is what most underbid jobs skip.</p>
+    <div class="process-img-placeholder">
+        [INSERT IMAGE/VIDEO HERE: Heavy-Duty Planetary Diamond Grinder in Action]
+    </div>
+</div>
+<div class="p-time">HALF TO FULL DAY</div>
+</div>
+<div class="process-row">
+<div class="p-num">04</div>
+<div><h4>Install — Primer, Base, Topcoat, Sealer</h4><p>Applied to spec in sequence, with cure time observed between coats rather than compressed to finish faster.</p></div>
+<div class="p-time">1–3 DAYS</div>
+</div>
+<div class="process-row">
+<div class="p-num">05</div>
+<div><h4>Cure &amp; Year-One Walkthrough</h4><p>Full cure guidance on move-in timing, then a scheduled check-in at 12 months as part of your care plan.</p></div>
+<div class="p-time">SCHEDULED AT 12 MO</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="joint"></div>
+
+<section id="proof" class="dark">
+<div class="wrap">
+<div class="section-head">
+<p class="eyebrow">Proof, Not Promises</p>
+<h2>What's actually been installed and holding up.</h2>
+</div>
+<div class="stats-row">
+<div class="stat"><b>[X,XXX+]</b><span>SQ FT INSTALLED, 2025 — CLIENT DATA</span></div>
+<div class="stat"><b>[X]</b><span>WARRANTY-CLAIM DELAMINATIONS TO DATE — CLIENT DATA</span></div>
+<div class="stat"><b>[X.X / 5]</b><span>AVG RATING, [XXX] REVIEWS — CLIENT DATA</span></div>
+<div class="stat"><b>15 YR</b><span>LONGEST STANDING WARRANTY TERM</span></div>
+</div>
+
+<div class="b-a-grid">
+    <div class="b-a-card">
+        <div class="b-a-label">The Prep</div>
+        <div class="b-a-img">
+        <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+        <linearGradient id="beforeBg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#8B8577"/>
+        <stop offset="100%" stop-color="#5B564D"/>
+        </linearGradient>
+        <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.05 0"/></filter>
+        </defs>
+        <rect width="400" height="280" fill="url(#beforeBg)"/>
+        <rect width="400" height="280" filter="url(#grain)"/>
+        <path d="M40 60 L120 90 L95 150 L180 130 L160 210 L260 180" stroke="#221F1C" stroke-width="2" fill="none" opacity="0.55"/>
+        <path d="M250 40 L300 100 L270 160 L340 190 L320 250" stroke="#221F1C" stroke-width="2" fill="none" opacity="0.45"/>
+        <ellipse cx="300" cy="90" rx="46" ry="20" fill="#3E4C48" opacity="0.35"/>
+        <ellipse cx="90" cy="210" rx="60" ry="22" fill="#7E5A2C" opacity="0.3"/>
+        <g font-family="IBM Plex Mono" font-size="11" fill="#EDEAE3" opacity="0.85">
+        <text x="18" y="26">CRACKING — UNTESTED SLAB</text>
+        </g>
+        </svg>
         </div>
-    </header>
-
-    <section class="relative z-20 -mt-24 mx-4 md:mx-auto max-w-5xl bg-[#1a1614] border border-[#3e352b] p-8 grid grid-cols-1 md:grid-cols-3 gap-8 shadow-2xl">
-        <div class="flex items-center gap-4">
-            <div class="text-gold text-xl">🕒</div>
-            <div>
-                <p class="text-[10px] uppercase tracking-widest text-gray-400">Check-In / Out</p>
-                <p class="text-white font-medium text-sm">3:00 PM / 11:00 AM</p>
-            </div>
+        <div class="b-a-caption">Untested slabs are why floors fail. We diagnose and diamond-grind before any coating is poured.</div>
+    </div>
+    <div class="b-a-card">
+        <div class="b-a-label">The Result</div>
+        <div class="b-a-img">
+        <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <defs>
+        <linearGradient id="afterBg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#354F4B"/>
+        <stop offset="55%" stop-color="#263835"/>
+        <stop offset="100%" stop-color="#1A2624"/>
+        </linearGradient>
+        <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#EDEAE3" stop-opacity="0.35"/>
+        <stop offset="35%" stop-color="#EDEAE3" stop-opacity="0.04"/>
+        <stop offset="100%" stop-color="#EDEAE3" stop-opacity="0"/>
+        </linearGradient>
+        </defs>
+        <rect width="400" height="280" fill="url(#afterBg)"/>
+        <g opacity="0.9">
+        <circle cx="46" cy="40" r="3" fill="#D6A868"/>
+        <circle cx="120" cy="70" r="2.4" fill="#EDEAE3"/>
+        <circle cx="200" cy="35" r="3.2" fill="#A9793D"/>
+        <circle cx="270" cy="90" r="2" fill="#EDEAE3"/>
+        <circle cx="340" cy="50" r="3" fill="#D6A868"/>
+        <circle cx="80" cy="140" r="2.6" fill="#A9793D"/>
+        <circle cx="160" cy="160" r="2" fill="#EDEAE3"/>
+        <circle cx="230" cy="130" r="3.4" fill="#D6A868"/>
+        <circle cx="310" cy="170" r="2.4" fill="#EDEAE3"/>
+        <circle cx="60" cy="220" r="3" fill="#A9793D"/>
+        <circle cx="140" cy="235" r="2.2" fill="#EDEAE3"/>
+        <circle cx="220" cy="210" r="3" fill="#D6A868"/>
+        <circle cx="300" cy="240" r="2.6" fill="#A9793D"/>
+        <circle cx="360" cy="200" r="2" fill="#EDEAE3"/>
+        </g>
+        <rect width="400" height="280" fill="url(#gloss)"/>
+        <rect x="0" y="0" width="400" height="90" fill="#EDEAE3" opacity="0.05"/>
+        <g font-family="IBM Plex Mono" font-size="11" fill="#EDEAE3" opacity="0.85">
+        <text x="18" y="26">FLAKE SYSTEM — CURED &amp; SEALED</text>
+        </g>
+        </svg>
         </div>
-        <a href="https://maps.google.com/maps?hl=en-GB&gl=ET&um=1&ie=UTF-8&fb=1&sa=X&geocode=KTks6tr-hUsWMXCrS8kA_-h0&daddr=2R37+8PJ%20Fountain%20Hotel%20%26%20SPA%2C%20Mebrat%20hail%2C%20Addis%20Ababa&ved=1t:55111&ictx=111" target="_blank" class="flex items-center gap-4 border-l border-[#3e352b] pl-0 md:pl-8 hover:opacity-80 transition cursor-pointer">
-            <div class="text-gold text-xl">📍</div>
-            <div>
-                <p class="text-[10px] uppercase tracking-widest text-gray-400">Location</p>
-                <p class="text-white font-medium text-sm">2R37+8PJ Mebrat hail, Addis Ababa</p>
-            </div>
-        </a>
-        <div class="flex items-center gap-4 border-l border-[#3e352b] pl-0 md:pl-8">
-            <div class="text-gold text-xl">📞</div>
-            <div>
-                <p class="text-[10px] uppercase tracking-widest text-gray-400">Support</p>
-                <p class="text-white font-medium text-sm">+251-11 639 4225</p>
-            </div>
-        </div>
-    </section>
+        <div class="b-a-caption">A permanently bonded system engineered for hot-tire resistance and heavy chemical traffic.</div>
+    </div>
+</div>
 
-    <section class="py-24 px-4">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            <!-- Superior Suite -->
-            <div class="group bg-[#1a1614] border border-[#3e352b] p-4 transition hover:border-gold">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFTA3EDR_L9Nr5_TjzZrsPjE57P5C4TrGZgBNqNf3-XwUd7WNKtlhdCpCt2LhYjd2qUgeprB6tBgH0bBDkqY9fG5mDRvtXWMR2lhCyK8PQFbFvfe6GM77xOu8uIS5RSgPNSuOo6hQ=w253-h304-k-no" onerror="this.src='https://placehold.co/400x300/1a1614/c5a059?text=Image+Unavailable'" alt="Superior Suite" class="w-full h-64 object-cover mb-6">
-                <h3 class="text-xl text-white mb-2 italic">Superior Suite</h3>
-                <a href="https://maps.google.com/maps?hl=en-GB&gl=ET&um=1&ie=UTF-8&fb=1&sa=X&geocode=KTks6tr-hUsWMXCrS8kA_-h0&daddr=2R37+8PJ%20Fountain%20Hotel%20%26%20SPA%2C%20Mebrat%20hail%2C%20Addis%20Ababa&ved=1t:55111&ictx=111" target="_blank" class="block w-full text-center border border-gold/50 py-3 text-white hover-gold transition uppercase tracking-widest text-xs mt-4">Book This Room</a>
-            </div>
+<div class="swatch-grid">
+<div class="swatch sw1"><span>Residential Garage — Flake System</span></div>
+<div class="swatch sw2"><span>Commercial Warehouse — Solid Color</span></div>
+<div class="swatch sw3"><span>Basement Floor — Metallic Pour</span></div>
+<div class="swatch sw4"><span>Retail Showroom — Polished Overlay</span></div>
+</div>
+<div class="testimonials">
+<div class="testi">
+<p>[Sample review layout — swap in a real client quote. Example: "Four winters of road salt off the tires and the coating still looks like the install photos."]</p>
+<cite>— [Real Client Name, Real Project Type]</cite>
+</div>
+<div class="testi">
+<p>[Sample review layout — swap in a real client quote about catching a problem competitors missed.]</p>
+<cite>— [Real Client Name, Real Project Type]</cite>
+</div>
+<div class="testi">
+<p>[Sample review layout — swap in a real client quote about pricing transparency.]</p>
+<cite>— [Real Client Name, Real Project Type]</cite>
+</div>
+</div>
+</div>
+</section>
 
-            <!-- Executive Room -->
-            <div class="group bg-[#1a1614] border border-[#3e352b] p-4 transition hover:border-gold">
-                <img src="https://www.stjamescourthotel.co.uk/files-sbbasic/ba_stjamescourta_gb/executive_-_king_room_-_a1k-2.jpg?w=720&h=720" onerror="this.src='https://placehold.co/400x300/1a1614/c5a059?text=Image+Unavailable'" alt="Executive Room" class="w-full h-64 object-cover mb-6">
-                <h3 class="text-xl text-white mb-2 italic">Executive Room</h3>
-                <a href="https://maps.google.com/maps?hl=en-GB&gl=ET&um=1&ie=UTF-8&fb=1&sa=X&geocode=KTks6tr-hUsWMXCrS8kA_-h0&daddr=2R37+8PJ%20Fountain%20Hotel%20%26%20SPA%2C%20Mebrat%20hail%2C%20Addis%20Ababa&ved=1t:55111&ictx=111" target="_blank" class="block w-full text-center border border-gold/50 py-3 text-white hover-gold transition uppercase tracking-widest text-xs mt-4">Book This Room</a>
-            </div>
+<div class="joint dark" style="background:var(--dark-bg);"></div>
 
-            <!-- Family Suite -->
-            <div class="group bg-[#1a1614] border border-[#3e352b] p-4 transition hover:border-gold">
-                <img src="https://lh5.googleusercontent.com/proxy/Dz7NOuYH_Y9-dDAi5hGiPLyIOjLNp-1PKAIOyRwWchp3xWzVCIRNNgu1JxPpgPaKtiIxwVsKGdkIq-Or7xxDt-qrDmqVcxGIURy_1QVcHIdkxPRu57LTHT1ACVPG7T6aTSLCPz3QM-cePJYSAVCssmMs6pc_qQ=w252-h168-k-no" onerror="this.src='https://placehold.co/400x300/1a1614/c5a059?text=Image+Unavailable'" alt="Family Suite" class="w-full h-64 object-cover mb-6">
-                <h3 class="text-xl text-white mb-2 italic">Family Suite</h3>
-                <a href="https://maps.google.com/maps?hl=en-GB&gl=ET&um=1&ie=UTF-8&fb=1&sa=X&geocode=KTks6tr-hUsWMXCrS8kA_-h0&daddr=2R37+8PJ%20Fountain%20Hotel%20%26%20SPA%2C%20Mebrat%20hail%2C%20Addis%20Ababa&ved=1t:55111&ictx=111" target="_blank" class="block w-full text-center border border-gold/50 py-3 text-white hover-gold transition uppercase tracking-widest text-xs mt-4">Book This Room</a>
-            </div>
+<section id="pricing">
+<div class="wrap">
+<div class="section-head">
+<p class="eyebrow">Investment</p>
+<h2>What a Strata floor actually costs.</h2>
+<p>Ranges below reflect real jobs, not a teaser number designed to get you on the phone.</p>
+</div>
+<table class="pricing">
+<thead>
+<tr><th>Project Type</th><th>Typical Range</th><th>What Moves the Price</th></tr>
+</thead>
+<tbody>
+<tr><td>Garage Floor Coating</td><td class="price">$4 – $7 / sq ft</td><td>Slab condition, prep grinding depth</td></tr>
+<tr><td>Basement / Residential Interior</td><td class="price">$5 – $9 / sq ft</td><td>Moisture readings, vapor barrier need</td></tr>
+<tr><td>Commercial / Light Industrial</td><td class="price">$6 – $12 / sq ft</td><td>Chemical exposure, traffic load, sq footage</td></tr>
+<tr><td>Decorative Flake / Metallic Upgrade</td><td class="price">+$1 – $3 / sq ft</td><td>Pattern complexity, coat count</td></tr>
+</tbody>
+</table>
+<p class="pricing-note">Final pricing is confirmed after your free diagnostic — never revised upward mid-project. If the slab needs more prep than expected, you'll see that in writing before we proceed, not on the final invoice.</p>
+</div>
+</section>
 
-            <!-- Spa Services -->
-            <div class="group bg-[#1a1614] border border-[#3e352b] p-4 transition hover:border-gold">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFSn8DLZJMHPEAzZfFWO_JJ2JcuXCeZGdO_-LthwY9BcR3zM9ouLs320GRUr-6b99xl_JXhMaUMq0niizf8MPnV_oTQT9nay44vLsAQqGENilM9oz7EWSktr_a_g2y4e_9b_6oQCltzIp1l=w252-h189-k-no" onerror="this.src='https://placehold.co/400x300/1a1614/c5a059?text=Image+Unavailable'" alt="Spa Services" class="w-full h-64 object-cover mb-6">
-                <h3 class="text-xl text-white mb-2 italic">Spa Services</h3>
-                <a href="https://maps.google.com/maps?hl=en-GB&gl=ET&um=1&ie=UTF-8&fb=1&sa=X&geocode=KTks6tr-hUsWMXCrS8kA_-h0&daddr=2R37+8PJ%20Fountain%20Hotel%20%26%20SPA%2C%20Mebrat%20hail%2C%20Addis%20Ababa&ved=1t:55111&ictx=111" target="_blank" class="block w-full text-center border border-gold/50 py-3 text-white hover-gold transition uppercase tracking-widest text-xs mt-4">Book Spa</a>
-            </div>
+<div class="joint"></div>
 
-        </div>
-    </section>
+<section id="checker" class="alt">
+<div class="wrap">
+<div class="section-head">
+<p class="eyebrow">Free Tool</p>
+<h2>Check your floor's failure risk.</h2>
+<p>Four questions. Get a risk read on your slab before you talk to anyone about pricing.</p>
+</div>
+<div class="checker">
+<div class="checker-intro">
+<h3>Why this matters</h3>
+<p>Coating failures are predictable — they follow specific slab conditions. This isn't a lead form dressed up as a quiz; it's the same factors we check on every diagnostic visit.</p>
+<ul>
+<li>Slab age and prior coating history</li>
+<li>Moisture exposure (grade level, drainage)</li>
+<li>Visible cracking or staining</li>
+<li>Traffic type — foot, vehicle, or chemical</li>
+</ul>
+</div>
+<div class="checker-body">
+<div class="q-block" data-q="age">
+<label>Slab age</label>
+<div class="q-options">
+<button class="q-opt" data-val="0">Under 5 yrs</button>
+<button class="q-opt" data-val="1">5–15 yrs</button>
+<button class="q-opt" data-val="2">15+ yrs</button>
+</div>
+</div>
+<div class="q-block" data-q="history">
+<label>Prior coating history</label>
+<div class="q-options">
+<button class="q-opt" data-val="0">Never coated</button>
+<button class="q-opt" data-val="1">Coated once, holding fine</button>
+<button class="q-opt" data-val="2">Previously peeled or bubbled</button>
+</div>
+</div>
+<div class="q-block" data-q="moisture">
+<label>Where is the slab?</label>
+<div class="q-options">
+<button class="q-opt" data-val="0">Above grade / garage</button>
+<button class="q-opt" data-val="1">Basement / below grade</button>
+<button class="q-opt" data-val="2">Outdoor / exposed</button>
+</div>
+</div>
+<div class="q-block" data-q="use">
+<label>Primary use</label>
+<div class="q-options">
+<button class="q-opt" data-val="0">Foot traffic</button>
+<button class="q-opt" data-val="1">Vehicle traffic</button>
+<button class="q-opt" data-val="2">Chemical / industrial</button>
+</div>
+</div>
+<div class="checker-result" id="checkerResult">
+<span class="risk-tag" id="riskTag">RISK LEVEL</span>
+<p id="riskCopy" style="color:var(--ink-soft); font-size:0.95rem;"></p>
+<a href="#" id="showLeadForm" data-tally-open="2EyrMA" data-tally-emoji-text="📋" data-tally-emoji-animation="tada" class="btn btn-primary" style="margin-top:14px;">Email Me My Full Risk Report</a>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-    <footer class="py-12 text-center text-gray-500 text-sm border-t border-[#3e352b]">
-        &copy; 2026 Fountain Hotel & SPA. All rights reserved.
-    </footer>
+<div class="joint"></div>
 
+<section id="faq">
+<div class="wrap">
+<div class="section-head">
+<p class="eyebrow">Questions</p>
+<h2>Answered before you have to ask.</h2>
+</div>
+<div class="faq-list">
+<div class="faq-item">
+<button class="faq-q"><span>How long does the coating actually last?</span><span class="plus">+</span></button>
+<div class="faq-a"><p>Our systems are backed by a 15-year written warranty against delamination, hot-tire pickup, and blistering on residential installs. Most floors installed correctly outlast the warranty term itself.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q"><span>Will it peel like my last contractor's job?</span><span class="plus">+</span></button>
+<div class="faq-a"><p>Peeling is almost always a moisture or prep issue, not a material one. Every job starts with a moisture test and a specified grinding profile before any coating goes down — the exact steps most peeling jobs skipped.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q"><span>How long is my garage or space unusable?</span><span class="plus">+</span></button>
+<div class="faq-a"><p>Most residential garages are park-ready in 2–3 days from install start. Commercial spaces can often be scheduled nights or weekends to avoid downtime — we'll confirm exact timing at your diagnostic visit.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q"><span>Do you work with older or damaged slabs?</span><span class="plus">+</span></button>
+<div class="faq-a"><p>Yes — this is exactly what the diagnostic visit is for. Cracking, prior coatings, and porosity all change the prep and system we spec, and we'll tell you upfront if a slab needs repair work first.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q"><span>What does the warranty actually cover?</span><span class="plus">+</span></button>
+<div class="faq-a"><p>Delamination, hot-tire pickup, and moisture-related blistering tied to our workmanship, for 15 years on residential and 5–7 years on commercial/industrial installs. Full terms are provided in writing before you sign.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="joint dark" style="background:var(--dark-bg);"></div>
+
+<section id="book" class="dark">
+<div class="wrap cta-grid">
+<div>
+<p class="eyebrow">Get Started</p>
+<h2>Book your free slab diagnostic.</h2>
+<p>30–45 minutes on site. No obligation, no sales pitch — a technical read of your floor and a written spec within 48 hours.</p>
+<div class="trust-strip" style="border-top:1px solid var(--dark-line); color:#C7BFA9;">
+<div>Licensed &amp; Insured — <strong style="color:#fff;">#[CLIENT LICENSE #]</strong></div>
+<div>Response within <strong style="color:#fff;">1 business day</strong></div>
+</div>
+</div>
+<div class="booking-card">
+<h4>Request a diagnostic visit</h4>
+<iframe data-tally-src="https://tally.so/embed/2EyrMA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Request a diagnostic visit"></iframe>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="footer-grid">
+<div>
+<div class="logo" style="color:#fff; margin-bottom:14px;"><span class="mark">/</span>STRATA</div>
+<p style="font-size:0.88rem; max-width:34ch; margin-bottom:20px;">Concrete and epoxy coating systems for residential and commercial floors, installed to a written spec and backed in writing.</p>
+<div class="badge-row">
+<span class="badge">Licensed &amp; Bonded</span>
+<span class="badge">ICRI Member</span>
+<span class="badge">Mfr-Certified Installer</span>
+</div>
+</div>
+<div>
+<h5>Explore</h5>
+<ul><li><a href="#offer">The Offer</a></li><li><a href="#process">Process</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul>
+</div>
+<div>
+<h5>Services</h5>
+<ul><li><a href="#">Garage Floors</a></li><li><a href="#">Basement Coatings</a></li><li><a href="#">Commercial / Industrial</a></li><li><a href="#">Decorative &amp; Metallic</a></li></ul>
+</div>
+<div>
+<h5>Contact</h5>
+<ul><li>(555) 014-8890</li><li>quote@strataflooring.com</li><li>License #[CLIENT LICENSE #]</li><li><a href="#">Verify License →</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Strata Concrete &amp; Epoxy Systems. All rights reserved.</span>
+<span>Licensed, Bonded &amp; Insured — State Contractors Board #[CLIENT LICENSE #]</span>
+</div>
+</div>
+</footer>
+
+<div class="mobile-cta">
+<a href="#" data-tally-open="2EyrMA" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" class="btn btn-primary">Book Free Diagnostic</a>
+</div>
+
+<script>
+document.querySelector('.mobile-toggle').addEventListener('click', function(){
+var links = document.querySelector('nav .links');
+var visible = links.style.display === 'flex';
+links.style.display = visible ? 'none' : 'flex';
+links.style.flexDirection = 'column';
+links.style.position = 'absolute';
+links.style.top = '64px';
+links.style.left = '0';
+links.style.right = '0';
+links.style.background = 'var(--bg)';
+links.style.padding = '20px 28px';
+links.style.borderBottom = '1px solid var(--line)';
+links.style.gap = '18px';
+});
+
+document.querySelectorAll('nav .links a').forEach(function(link){
+link.addEventListener('click', function(){
+var links = document.querySelector('nav .links');
+if(window.innerWidth < 920){ links.style.display = 'none'; }
+});
+});
+
+document.querySelectorAll('.faq-item').forEach(function(item){
+item.querySelector('.faq-q').addEventListener('click', function(){
+var wasOpen = item.classList.contains('open');
+document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+if(!wasOpen) item.classList.add('open');
+});
+});
+
+var answers = {};
+document.querySelectorAll('.q-block').forEach(function(block){
+var qKey = block.getAttribute('data-q');
+block.querySelectorAll('.q-opt').forEach(function(opt){
+opt.addEventListener('click', function(){
+block.querySelectorAll('.q-opt').forEach(function(o){ o.classList.remove('active'); });
+opt.classList.add('active');
+answers[qKey] = parseInt(opt.getAttribute('data-val'), 10);
+maybeShowResult();
+});
+});
+});
+
+function maybeShowResult(){
+var keys = ['age','history','moisture','use'];
+var answeredAll = keys.every(function(k){ return answers[k] !== undefined; });
+if(!answeredAll) return;
+var score = keys.reduce(function(sum,k){ return sum + answers[k]; }, 0);
+var tag = document.getElementById('riskTag');
+var copy = document.getElementById('riskCopy');
+var result = document.getElementById('checkerResult');
+tag.className = 'risk-tag';
+if(score <= 2){
+tag.classList.add('risk-low');
+tag.textContent = 'Low Risk';
+copy.textContent = 'Your slab profile looks favorable. A standard coating system should perform well — a diagnostic visit will confirm moisture readings before install.';
+} else if(score <= 5){
+tag.classList.add('risk-med');
+tag.textContent = 'Moderate Risk';
+copy.textContent = 'One or more factors here are common causes of early coating failure. A moisture test and slab profile are worth doing before any quote — not after.';
+} else {
+tag.classList.add('risk-high');
+tag.textContent = 'Elevated Risk';
+copy.textContent = 'This combination of factors is exactly what causes peeling and blistering in underspecified installs. A full diagnostic should happen before any coating decision is made.';
+}
+result.classList.add('show');
+}
+
+document.getElementById('showLeadForm').addEventListener('click', function(e){
+e.preventDefault();
+var riskLevel = document.getElementById('riskTag') ? document.getElementById('riskTag').textContent : '';
+if (window.Tally) {
+Tally.openPopup('2EyrMA', {
+emoji: { text: '📋', animation: 'tada' },
+hiddenFields: { risk_level: riskLevel }
+});
+}
+});
+</script>
+
+<script>
+/* ---- PERSONALIZATION LAYER ----
+   Reads ?biz=&phone=&email=&license= from the URL and swaps them into the
+   page live, client-side, with no rebuild/redeploy needed per prospect.
+   Example link to send a prospect:
+   https://your-demo-url.vercel.app/?biz=Arkansas%20Polish%20%26%20Epoxy&phone=479-426-6359&email=quote%40arkansaspolish.com&license=AR-00000
+   If no params are present, the page just shows the default Strata demo. */
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var biz = params.get('biz');
+  var phone = params.get('phone');
+  var email = params.get('email');
+  var license = params.get('license');
+
+  if (!biz && !phone && !email && !license) return;
+
+  function replaceAllText(root, find, replace) {
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+    var node;
+    var targets = [];
+    while ((node = walker.nextNode())) {
+      if (node.nodeValue.indexOf(find) !== -1) targets.push(node);
+    }
+    targets.forEach(function (n) {
+      n.nodeValue = n.nodeValue.split(find).join(replace);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    if (biz) {
+      replaceAllText(document.body, 'STRATA', biz.toUpperCase());
+      replaceAllText(document.body, 'Strata Concrete & Epoxy Systems', biz);
+      document.title = document.title.replace('Strata Concrete & Epoxy Systems', biz);
+    }
+    if (phone) {
+      replaceAllText(document.body, '(555) 014-8890', phone);
+    }
+    if (email) {
+      replaceAllText(document.body, 'quote@strataflooring.com', email);
+    }
+    if (license) {
+      replaceAllText(document.body, '[CLIENT LICENSE #]', license);
+    }
+    // Hide the internal dev-only sample-page flag once a real prospect param is present
+    var flag = document.querySelector('[data-demo-flag]');
+    if (flag) flag.style.display = 'none';
+  });
+})();
+</script>
+
+<script src="//code.tidio.co/xvpcgiyitoyue5gajsvffe43pteyjcey.js" async></script>
 </body>
 </html>
